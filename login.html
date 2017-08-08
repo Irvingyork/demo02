@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <script>
+        function validate(x) {
+            if (document.getElementById(x).value == null
+                || document.getElementById(x).value == "") {
+                document.getElementById(x).style.borderColor = "red";
+                document.getElementById(x).value = "不能为空"
+            }
+        }
+        function assignull(x) {
+            document.getElementById(x).style.borderColor = "#8B8B7A";
+            document.getElementById(x).value = null
+        }
+    </script>
+</head>
+<body>
+<form name="login" action="">
+<div class="content">
+    <div class="login">
+        <table>
+            <tr>
+                <td class="ltd">
+                </td>
+                <td>
+                   用户登录
+                </td>
+            </tr>
+            <tr>
+                <td class="ltd">
+                    <img src="images/img3.jpg" alt="图片"/>
+                    用户名
+                </td>
+                <td class="ctd">
+                    <input type="text" id="username" name="username" onblur="validate(this.id)" onfocus="assignull(this.id)"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="ltd">
+                    <img src="images/img4.png" alt="图片"/>
+                    密&nbsp&nbsp码
+                </td>
+                <td>
+                    <input type="password" id="password" name="password"onblur="validate(this.id)" onfocus="assignull(this.id)" />
+                </td>
+            </tr>
+            <tr>
+                <td class="ltd">
+                    <img src="images/img7.png"/>
+                    验证码
+                </td>
+                <td>
+                    <input type="text" id="yanzhengma" name="yanzhengma" onblur="validate(this.id)" onfocus="assignull(this.id)"/>
+                </td>
+                <td class="rtd">
+                    <img src="images/img3.jpg" alt="验证码">
+                </td>
+            </tr>
+            <tr>
+                <td class="ltd">
+
+                </td>
+                <td>
+                    <input type="checkbox" name="repass" >记住密码
+                    <input type="checkbox" name="autologin" >自动登录
+                </td>
+            </tr>
+            <tr>
+                <td class="ltd"></td>
+                <td >
+                    <a href="User/index.html"><img src="images/img21.png"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</form>
+</body>
+</html>
